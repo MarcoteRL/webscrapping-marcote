@@ -11,6 +11,3 @@ def telegram_bot_sendtext(bot_message):
     
 if precioSuspFinal <= precioDeseado:
     test = telegram_bot_sendtext(f"¡ATENCION! Hay oferta,bajo el precio! Está en: {str(precioSuspFinal) + '€'}\nEnlace: https://cutt.ly/fXzM2xi")
-
-
-
