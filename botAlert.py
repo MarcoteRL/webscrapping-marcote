@@ -7,7 +7,8 @@ url = requests.get("https://www.oscaro.es/juego-de-4-amortiguadores-muelles-koni
 
 soup = BeautifulSoup(url.content, 'html.parser')
 result = soup.find("p", {"class": "price"})
-precioSuspEuros = result.text
+if result.text is not None:
+    precioSuspEuros = result.text
 precioSusp = precioSuspEuros.replace("€", "")
 precioSusp2 = precioSusp.replace(",", ".")
 precioSuspFinal = float(precioSusp2)
